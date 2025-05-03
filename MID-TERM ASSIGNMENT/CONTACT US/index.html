@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+
+    
+    <form class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+      <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="phone Number">
+    <br><br>
+
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form> 
+  </div>
+  <br/><br/>
+   <!-- Font Awesome for Icons (optional) -->
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+  
+      <div class="contact-info">
+        <div class="info-box">
+          <i class="fas fa-phone-alt"></i>
+          <span>+92 300 1234567</span>
+          <span>021111503504</span>
+        </div>
+        <div class="info-box">
+          <i class="fas fa-envelope"></i>
+          <span>info@alkhidmat.org</span>
+        </div>
+        <div class="info-box">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Alkhidmat, Karachi, Pakistan</span>
+        </div>
+      </div>
+  
+      <div class="socials">
+        <h3>Follow Us</h3>
+        <a href="https://www.facebook.com/alkhidmatKHI" target="_blank"><i class="fab fa-facebook-f">FACEBOOK</i></a>
+        <a href="https://twitter.com/Alkhidmatkhi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fab fa-twitter">TWITTER</i></a>
+        <a href="https://www.instagram.com/alkhidmatpakistan/?hl=en" target="_blank"><i class="fab fa-instagram">INSTAGRAM</i></a>
+        <a href="https://www.youtube.com/channel/UCOe1-ACTxgEwZEKF507wPkw" target="_blank"><i class="fab fa-youtube">YOUTUBE</i></a>
+      </div>
+    </div>
+</body>
+</html>
