@@ -8,78 +8,80 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">  SUPPORT PALESTINE</div>
+    <div class="logo">SUPPORT PALESTINE</div>
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <ul class="nav-links" id="nav-links">
       <li><a href="index.html" target="_blank">HOME</a></li>
-      <li><a href="bycott.html" target="_blank">BYCOTT</a></li>
+      <li><a href="bycott.html" target="_blank">BOYCOTT</a></li>
       <li><a href="donation.html" target="_blank">DONATIONS</a></li>
       <li><a href="contact.html" target="_blank">CONTACT</a></li>
       <li><a href="about.html" target="_blank">ABOUT</a></li>
     </ul>
   </nav>
+
+  <!-- Contact Form -->
   <div class="contact-container">
     <h1>Contact Us</h1>
-
-    
     <form class="contact-form">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="text" id="name" name="name" required placeholder="Your Name">
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required placeholder="Your Email">
 
       <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      <input type="text" id="subject" name="subject" required placeholder="Subject">
 
-      <label for="phone">Phone Number:</label><br>
-    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="phone Number">
-    <br><br>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="Enter 10-digit phone">
 
-
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required placeholder="Type your message here..."></textarea>
 
       <button type="submit">Send Message</button>
-    </form> 
+    </form>
   </div>
-  <br/><br/>
-   <!-- Font Awesome for Icons (optional) -->
-   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <div class="contact-section">
-      <h2>Contact Us</h2>
-  
-      <div class="contact-info">
-        <div class="info-box">
-          <i class="fas fa-phone-alt"></i>
-          <span>+92 300 1234567</span>
-          <span>021111503504</span>
-        </div>
-        <div class="info-box">
-          <i class="fas fa-envelope"></i>
-          <span>info@alkhidmat.org</span>
-        </div>
-        <div class="info-box">
-          <i class="fas fa-map-marker-alt"></i>
-          <span>Alkhidmat, Karachi, Pakistan</span>
-        </div>
+
+  <!-- Contact Info -->
+  <div class="contact-section">
+    <h2>Reach Out</h2>
+    <div class="contact-info">
+      <div class="info-box">
+        <i class="fas fa-phone-alt"></i>
+        <span>+92 300 1234567</span>
       </div>
-  
-      <div class="socials">
-        <h3>Follow Us</h3>
-        <a href="https://www.facebook.com/alkhidmatKHI" target="_blank"><i class="fab fa-facebook-f">FACEBOOK</i></a>
-        <a href="https://twitter.com/Alkhidmatkhi?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fab fa-twitter">TWITTER</i></a>
-        <a href="https://www.instagram.com/alkhidmatpakistan/?hl=en" target="_blank"><i class="fab fa-instagram">INSTAGRAM</i></a>
-        <a href="https://www.youtube.com/channel/UCOe1-ACTxgEwZEKF507wPkw" target="_blank"><i class="fab fa-youtube">YOUTUBE</i></a>
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <span>info@alkhidmat.org</span>
+      </div>
+      <div class="info-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Alkhidmat, Karachi, Pakistan</span>
       </div>
     </div>
-  <!-- Small Script for Mobile Menu -->
+    <div class="socials">
+      <h3>Follow Us</h3>
+      <a href="https://www.facebook.com/alkhidmatKHI" target="_blank"><i class="fab fa-facebook-f">FACEBOOK</i></a>
+      <a href="https://twitter.com/Alkhidmatkhi" target="_blank"><i class="fab fa-twitter">TWITTER</i></a>
+      <a href="https://www.instagram.com/alkhidmatpakistan" target="_blank"><i class="fab fa-instagram">INSTAGRAM</i></a>
+      <a href="https://www.youtube.com/channel/UCOe1-ACTxgEwZEKF507wPkw" target="_blank"><i class="fab fa-youtube">YOUTUBE</i></a>
+    </div>
+  </div>
+
+  <!-- Script for mobile nav toggle -->
   <script>
     const toggle = document.getElementById('menu-toggle');
-    const links = document.getElementById('nav-links');
+    const nav = document.getElementById('nav-links');
 
     toggle.addEventListener('click', () => {
-      links.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // Simple feedback for the form
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for contacting us!');
+      this.reset();
     });
   </script>
 </body>
